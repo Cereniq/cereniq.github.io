@@ -1,0 +1,185 @@
+//Värit
+
+-main-color 			= hsla(205, 100, 50, 1)
+-main-color-dark 		= hsla(215, 35, 7, 1)
+-main-color-highlight	= hsla(205, 100, 85, 1)
+
+-font-color				= hsla(0, 0, 99, .92)
+-font-hover				= hsla(0, 0, 100, 1)
+
+-white-fix				= hsla(0, 0, 100, .95) 
+
+//Muuta
+html
+	font-size 16px
+
+html, body
+	height 100%  !important
+
+body
+	color -white-fix
+	background-image url("/assets/img/dark_geometric.png")
+	//background-image url("/assets/img/ep_naturalblack.png")
+	background-attachment fixed
+	
+h1, h2
+	color -main-color
+
+h3
+	font-size 1.2rem
+
+blockquote
+	padding 1rem
+	background hsla(205, 100, 50, .05)
+	-webkit-box-shadow: 0px 0px 6px 2px hsla(205, 100, 50, .05)
+	-moz-box-shadow: 0px 0px 6px 2px hsla(205, 100, 50, .05)
+	box-shadow: 0px 0px 6px 2px hsla(205, 100, 50, .05)
+
+
+#header
+	//background hsla(0, 0, 100, .02)
+	height 200px
+	text-align center
+	
+	h1
+		padding-top 100px
+
+#navi	
+	margin-left -235px
+	margin-top 244px
+	font-size 1.3rem
+	line-height 1rem
+	position fixed
+	color -white-fix
+	text-align right
+	border-right solid 1px -main-color-highlight
+	a
+		color -main-color
+		
+		&:hover
+			color -main-color-highlight
+
+	.active
+		a
+			color -main-color-highlight
+
+.txt-bg
+	background hsla(0, 0, 100, .02)
+	-webkit-box-shadow: 0px 0px 6px 2px hsla(0, 0, 0, .45)
+	-moz-box-shadow: 0px 0px 6px 2px hsla(0, 0, 0, .45)
+	box-shadow: 0px 0px 6px 2px hsla(0, 0, 0, .45)
+	
+.container
+	max-width 740px
+	
+.osaaminen
+	padding 1rem
+	margin 1rem
+	background hsla(205, 100, 50, .05)
+	-webkit-box-shadow 0px 0px 6px 2px hsla(205, 100, 50, .05)
+	-moz-box-shadow 0px 0px 6px 2px hsla(205, 100, 50, .05)
+	box-shadow 0px 0px 6px 2px hsla(205, 100, 50, .05)
+	width 320px
+	
+	img
+		max-height 200px
+		margin auto
+		display block
+
+
+.galleria
+	
+	img
+		margin 10px
+		border 1px solid -main-color-highlight
+		background-color white
+		border-radius 2px
+		-webkit-box-shadow 5px 5px 6px -2px hsla(0, 0, 0, .75)
+		-moz-box-shadow 5px 5px 6px -2px hsla(0, 0, 0, .75)
+		box-shadow 5px 5px 6px -2px hsla(0, 0, 0, .75)
+		transition .5s ease
+		
+		&:hover
+			background-color -white-fix
+			transition .5s ease	
+			opacity .5
+
+	
+//Määrittää välin footerin ja containerin väliin
+.push
+	height 65px
+	
+	//Footeri
+footer
+	padding .85em 0
+	color -font-color
+	position relative
+	background hsla(0, 0, 18, .75)
+	border-top 2px solid -main-color-highlight
+	
+	ul
+		padding 0
+		
+		li
+			list-style none
+			
+			a
+				color -white-fix
+				
+				&:hover
+					color -main-color-highlight
+					text-decoration none
+			
+			.fa-envelope-open-text, .fa-linkedin, .fa-discord
+				margin-right 5px
+				font-size 1.2rem
+
+			
+.code-toolbar
+	margin-bottom 2rem
+
+	
+.fancybox-caption
+	font-size 1.2rem !important
+	
+.nav-toggle
+	display none
+	
+
+@media only screen and (max-width: 1162px)
+	
+	.nav-wrap
+		background hsla(0, 0, 15, .98)
+		position fixed
+		width 100%
+		z-index 10
+		border-bottom 2px solid -main-color-highlight
+
+	#navi
+		margin 0 auto
+		border 0
+		position relative
+		padding 15px
+		display block
+		font-weight 600
+				
+		.flex-column
+			flex-direction row !important
+			
+
+@media only screen and (max-width: 750px)
+	.nav-toggle
+		display block
+		font-size 2rem
+		text-align right
+		
+	#navi
+		display none
+		font-weight 600
+		font-size 1.5rem
+		text-align center
+			
+		.flex-column
+			flex-direction column !important
+			
+
